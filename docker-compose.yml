@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  amber-alert:
+    build: .
+    container_name: tak-amber-alert
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - ./certs:/certs:ro
+      - ./data:/app/data
+      - ./logs:/app/logs
+    networks:
+      - tak-network
+
+networks:
+  tak-network:
+    driver: bridge

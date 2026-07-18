@@ -1,0 +1,5 @@
+# Vendor takgateway library
+takgateway/
+
+# Dependencies
+requests>=2.31.0
